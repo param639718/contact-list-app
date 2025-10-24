@@ -1,77 +1,168 @@
-<<<<<<< HEAD
-# Welcome to your Lovable project
+# contact-list-app
 
-## Project info
+A simple **Contact Manager web app** built with **Vite + TypeScript + React**.
+Manage and organize personal or professional contacts in a clean, responsive UI.
 
-**URL**: https://lovable.dev/projects/05be591c-1caa-4735-9b32-2beea3db2ce8
+---
 
-## How can I edit this code?
+## 🚀 Live demo
 
-There are several ways of editing your application.
+**Production (Vercel):** [https://contact-list-app-tawny.vercel.app](https://contact-list-app-tawny.vercel.app)
+**Source (GitHub):** [https://github.com/param639718/contact-list-app.git](https://github.com/param639718/contact-list-app.git)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/05be591c-1caa-4735-9b32-2beea3db2ce8) and start prompting.
+## ✨ Key features
 
-Changes made via Lovable will be committed automatically to this repo.
+* Add, edit, and delete contacts
+* Search and filter by name
+* Responsive design for mobile and desktop
+* Local storage for persistence
+* Built with **React + TypeScript + Tailwind CSS + shadcn/ui**
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📂 Project structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+/src
+  /components    # Reusable UI components
+  /pages         # Page-level components or views
+  /hooks         # Custom React hooks
+  /lib           # Utility functions (API, storage)
+  App.tsx
+  main.tsx
+/public
+  index.html
+package.json
+vite.config.ts
+README.md
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ⚙️ Getting started
 
-**Use GitHub Codespaces**
+### Prerequisites
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+* Node.js (latest LTS)
+* npm (comes with Node) or yarn
 
-## What technologies are used for this project?
+### Steps
 
-This project is built with:
+```bash
+# 1. Clone the repo
+git clone https://github.com/param639718/contact-list-app.git
+cd contact-list-app
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# 2. Install dependencies
+npm install
 
-## How can I deploy this project?
+# 3. Start local development server
+npm run dev
 
-Simply open [Lovable](https://lovable.dev/projects/05be591c-1caa-4735-9b32-2beea3db2ce8) and click on Share -> Publish.
+# 4. Build for production
+npm run build
 
-## Can I connect a custom domain to my Lovable project?
+# 5. Preview production build locally
+npm run preview
+```
 
-Yes, you can!
+Now open your browser at [http://localhost:5173](http://localhost:5173).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-=======
-# contact-list-app
->>>>>>> 07026dd5375b6949dcad2f1821ba71752b0ab39d
+## ⚡ Environment variables
+
+If you use an external API or backend, create a `.env` file (not committed to GitHub):
+
+```
+VITE_API_BASE_URL=https://api.example.com
+```
+
+For deployment on Vercel:
+Go to **Project → Settings → Environment Variables** and add the same keys.
+
+---
+
+## 🧠 Design choices & assumptions
+
+* **Storage:** Uses browser `localStorage` for simplicity — backend API optional.
+* **Validation:** Basic validation for required fields (name, phone, email).
+* **Routing:** SPA routing with client-side navigation.
+* **UI:** Tailwind + shadcn/ui for rapid, clean design.
+* **Accessibility:** Uses semantic HTML and keyboard-focus friendly inputs.
+
+---
+
+## 🤔 Handling ambiguity
+
+Some behaviors (sorting, duplicate handling, advanced filters) are intentionally open-ended.
+If you extend functionality, document decisions under **Assumptions** here.
+
+Example:
+
+* Duplicate contacts overwrite existing entry by name.
+* Search is case-insensitive and debounced by 300ms.
+
+---
+
+## 🧩 Libraries & why
+
+| Library      | Purpose                     |
+| ------------ | --------------------------- |
+| React        | UI framework                |
+| TypeScript   | Static typing               |
+| Vite         | Build tool & dev server     |
+| Tailwind CSS | Utility-first CSS framework |
+| shadcn/ui    | Styled component primitives |
+
+---
+
+## 🧪 Testing & debugging
+
+* Check console and build logs if app doesn’t load.
+* Run `npm run build && npm run preview` to test production build locally.
+* On Vercel, view **Deployments → Logs** for build/runtime errors.
+
+---
+
+## 🌐 Deployment
+
+Deployed automatically via **Vercel GitHub Integration**:
+
+**Build command:** `npm run build`
+**Output directory:** `dist`
+
+Each commit to `main` triggers a redeployment.
+
+**Production URL:** [https://contact-list-app-tawny.vercel.app](https://contact-list-app-tawny.vercel.app)
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repo
+2. Create a feature branch
+
+   ```bash
+   git checkout -b feat/your-feature
+   ```
+3. Commit and push
+
+   ```bash
+   git push origin feat/your-feature
+   ```
+4. Create a Pull Request
+
+---
+
+## 🔮 Future improvements
+
+* Add authentication (per-user data)
+* Contact import/export (CSV/vCard)
+* Avatar upload (image or Gravatar)
+* Advanced filters and sorting
+
+---
+
